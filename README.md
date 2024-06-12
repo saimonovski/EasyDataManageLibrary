@@ -1,5 +1,5 @@
 # Implementation
-you must insert *version* the version from [repository-central]{https://central.sonatype.com/artifact/io.github.saimonovski/DataManage/versions}
+you must insert *version* the version from {repository-central}[https://central.sonatype.com/artifact/io.github.saimonovski/DataManage/versions]
 -  ## Maven
 ```
 <dependency>
