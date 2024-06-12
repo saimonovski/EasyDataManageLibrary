@@ -1,15 +1,16 @@
 # Implementation
+you must insert *version* the version from [repository-central]{https://central.sonatype.com/artifact/io.github.saimonovski/DataManage/versions}
 -  ## Maven
 ```
 <dependency>
     <groupId>io.github.saimonovski</groupId>
     <artifactId>DataManage</artifactId>
-    <version>1.0</version>
+    <version>version</version>
 </dependency>
 ```
 -  ## Gradle
   ```
-implementation group: 'io.github.saimonovski', name: 'DataManage', version: '1.0'
+implementation group: 'io.github.saimonovski', name: 'DataManage', version: 'version'
 ```
 # Usage
 First select type of handler & create instance of DataManager 
