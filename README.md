@@ -13,8 +13,10 @@ you must insert *version* the version from [repository-central](https://central.
 implementation group: 'io.github.saimonovski', name: 'DataManage', version: 'version'
 ```
 # Usage
+## For better performance please visit javadocs (under this section)
 First select type of handler & create instance of DataManager 
 `YamlHandler yamlData = DataManager.createInstance("something type here);`
+
 list of types:
 - YamlHandler - handler for yaml files
 - MYSQLHandler - handler for mysql database
