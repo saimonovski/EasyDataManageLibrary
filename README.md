@@ -29,4 +29,4 @@ list of types:
   ```
 
   # javadocs
-  
+  https://saimonovski.github.io/EasyDataManageLibrary/
