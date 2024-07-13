@@ -65,7 +65,7 @@ public class YAMLHandler {
     }
 
     /**
-     * Example method demonstrating the usage of the YAMLHandler class.
+     * Main method demonstrating the usage of the YAMLHandler class.
      *
      * @param args command line arguments
      */
