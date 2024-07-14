@@ -14,7 +14,9 @@ public class MysqlHandler {
             this.database_port = database_port;
         }
     }
-
+    //todo connect method
+    //todo insert & delete & get data method
+    //todo create & delete table methods
 
 
 }
