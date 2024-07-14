@@ -31,4 +31,4 @@ list of types:
   ```
 
   # javadocs
-  https://saimonovski.github.io/EasyDataManageLibrary/
+  https://www.javadoc.io/doc/io.github.saimonovski/DataManage/latest/index.html
