@@ -3,6 +3,7 @@ package io.github.saimonovski.data.manage;
 import io.github.saimonovski.data.manage.dataManager.Connector;
 import io.github.saimonovski.data.manage.dataManager.YAMLHandler;
 
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +23,6 @@ public class Main {
         //example of creating manager for yaml files
 
         YAMLHandler yamlManager = Connector.connectYaml("config.yml");
-
             //below you can see how you can save data to a yaml file
             Map<String, Object> yamlDatas = new HashMap<>();
             yamlDatas.put("number1", 123);
