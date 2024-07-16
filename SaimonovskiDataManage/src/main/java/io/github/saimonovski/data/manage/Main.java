@@ -3,7 +3,6 @@ package io.github.saimonovski.data.manage;
 import io.github.saimonovski.data.manage.dataManager.Connector;
 import io.github.saimonovski.data.manage.dataManager.YAMLHandler;
 
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
