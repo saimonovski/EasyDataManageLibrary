@@ -27,7 +27,7 @@ public class MysqlHandler {
         DB_URL = "jdbc:mysql://" + database_hostname + "/" + database_name;
     }
 
-    //todo connect method
+
     private boolean connect() throws SQLException {
         try {
             Class.forName(MysqlHandler.DRIVER);
@@ -83,5 +83,23 @@ public class MysqlHandler {
         return true;
     }
     //todo insert & delete & get data method
+    public boolean deleteTable(String tableName) throws SQLException {
+        if(!connect()) return false;
+        statement.execute("DROP TABLE "+tableName);
+        return true;
+    }
+
+    /**
+     * Method which will deleted some tables
+     * @param tableNames names of tables that have to be deleted
+     * @return return a true if all go positive
+     * @throws SQLException when get an exception or invalid table name
+     */
+    public boolean deletetables(String...tableNames) throws SQLException {
+        for (String tableName : tableNames) {
+            deleteTable(tableName);
+        }
+        return true;
+    }
 
 }
