@@ -1,10 +1,10 @@
 package io.github.saimonovski.data.manage.dataManager.mysql;
 
 
-import java.sql.*;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Map;
 
 public class MysqlHandler {
@@ -43,43 +43,45 @@ public class MysqlHandler {
         return true;
     }
 
-      /**
+    /**
      * Method which will create tables in your database
      * @param tables  keymap where key is a table name and a value is other keymap where key is a column name and value is a sql column value e.g. LONGTEXT or VARCHAR(255)
      * @return always return true unless were not got an exception
      * @throws SQLException throws an exception if you  couldn't connect to a database e.g. for invalid password or invalid data
-*/
-    public boolean createTables(Map<String, Map<String,String>> tables) throws SQLException {
-        for (String s: tables.keySet()
-             ) {
-           if(!createTable(s,tables.get(s))) return false; break;
+     */
+    public boolean createTables(Map<String, Map<String, String>> tables) throws SQLException {
+        for (String s : tables.keySet()
+        ) {
+            if (!createTable(s, tables.get(s))) return false;
+            break;
         }
-            return true;
-           }
+        return true;
+    }
 
     /**
      * Method which will create table in your database
+     *
      * @param tableName Name of mysql table
-     * @param columns Map<String,String> where first string is a column name and second string is a sql column value e.g. longtext or varchar(255)
+     * @param columns   Map<String,String> where first string is a column name and second string is a sql column value e.g. longtext or varchar(255)
      * @return unless get an exception return boolean value true
      * @throws SQLException throws an exception when cannot execute the sql or sql column value is invalid
      */
-    public boolean createTable(String tableName, Map<String,String>columns) throws SQLException {
-                if(!connect()) return false;
-                StringBuilder builder = new StringBuilder("CREATE TABLE IF NOT EXISTS "+tableName+"(");
-                for (
-                        String columnName : columns.keySet()
-                ){
-                    builder.append(columnName)
-                            .append(" ")
-                            .append(columns.get(columnName)).append(", ");
+    public boolean createTable(String tableName, Map<String, String> columns) throws SQLException {
+        if (!connect()) return false;
+        StringBuilder builder = new StringBuilder("CREATE TABLE IF NOT EXISTS " + tableName + "(");
+        for (
+                String columnName : columns.keySet()
+        ) {
+            builder.append(columnName)
+                    .append(" ")
+                    .append(columns.get(columnName)).append(", ");
 
-                }
-                builder.deleteCharAt(builder.length() -1 ).deleteCharAt(builder.length());
-                builder.append(");");
-                statement.execute(builder.toString());
-                return true;
-           }
+        }
+        builder.deleteCharAt(builder.length() - 1).deleteCharAt(builder.length());
+        builder.append(");");
+        statement.execute(builder.toString());
+        return true;
+    }
     //todo insert & delete & get data method
 
 }
