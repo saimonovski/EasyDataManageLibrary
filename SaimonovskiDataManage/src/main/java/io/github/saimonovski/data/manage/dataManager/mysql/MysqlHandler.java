@@ -7,6 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 
+
+/**
+ * class making a connections to a mysql database
+ */
 public class MysqlHandler {
     String database_password, database_username, database_hostname, database_name, database_port;
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
